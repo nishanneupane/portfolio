@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+}
+@keyframes mymove{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+/*header css starts*/
+
+
+.header{
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgb(39, 37, 37);
+    position: sticky;
+    opacity: 1;
+    box-shadow: 0px 0px 5px 1px rgb(34, 32, 32);
+    z-index: 1;
+}
+.header .header-left{
+    width: 30%;
+    float: left;
+    margin-left: 30px;
+
+}
+
+/*.header .header-left img{
+    height: 60px;
+    width: 60px;
+}*/
+
+
+.header .header-left a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 30px;
+    transition: 0.3s ease;
+}
+.header .header-left a:hover{
+    color: green;
+}
+.header .header-left span{
+    color: green;
+    font-size: 32px;
+    transition: 0.3s ease;
+}
+.header .header-left span:hover{
+    color: yellow;
+}
+.header .header-right{
+    float: right;
+    margin-top: 20px;
+}
+.header .header-right a{
+    text-decoration: none;
+    color: rgb(179, 161, 161);
+    text-shadow: 0px 0px 1px green;
+    font-size: 22px;
+    margin-right: 40px;
+    transition: 0.3s ease;
+
+}
+.header .header-right a:hover{
+    color: green;
+    text-shadow: 0px 0px 50px green;
+    border: none;
+    transform: skewX(45deg);
+}
+
+/*header css Ends*/
+
+/*Home page css starts*/
+
+.main-container{
+    height: 100vh;
+    width: 100%;
+    position: static;
+}
+.main-container .left{
+    height: 100vh;
+    float: left;
+    width: 50%;
+    
+}
+.main-container .right{
+    height: 100vh;
+    float: right;
+    width: 50%;
+}
+.main-container .left .text{
+    margin-top: 20vh;
+    margin-left: 50px;
+}
+.main-container .left .text .a{
+
+    font-size: 22px;
+    color: green;
+    text-shadow: 0px 0px 5px green;
+    display: inline;
+}
+.main-container .left .text span{
+    display: block;
+    animation: mymove 3s 1;
+    margin-top: 10px;
+    font-size: 42px;
+    color: yellow;
+    text-shadow: 1px 0px 1px yellow;
+    cursor: pointer;
+}
+.main-container .left .button{
+    margin-top: 20px;
+    width: 20%;
+    text-align: center;
+    color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+}
+.main-container .left .button:hover{
+    color: #fff;
+    background: green;
+}
+.main-container .left .button-cv{
+    margin-top: 20px;
+    width: 30%;
+    text-align: center;
+    color: yellow;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.main-container .left .button-cv:hover{
+    color: rgb(139, 113, 113);
+    background: rgb(207, 207, 2);
+    font-weight: 700;
+}
+
+.main-container .right{
+    margin-top: 50px;
+    border: 1px green;
+    margin-right: 60px;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 50px 5px green;
+
+}
+.main-container .right h1{
+    color: green;
+    text-align: center;
+    text-shadow: 0px 0px 20px green;
+}
+.main-container .right img{
+    margin-left: 30px;
+    margin-top: 70px;
+    border-radius: 10px;
+
+}
+.main-container .right img:hover{
+    transition: 0.3s ease;
+    transform: skew('90deg');
+    box-shadow: 0px 0px 5px 1px green;
+    background: linear-gradient(450deg, black, rgb(24, 23, 23));
+}
+hr{
+    color: aqua;
+    opacity: 0.07;
+}
+/*Homepage css Ends*/
+
+/* About Section Css Starts */
+
+.about{
+    height: 100vh;
+    width: 100%;
+    transition: 2s;
+    /*position: static;
+    display: block;*/
+}
+.about .about-section{
+    float: left;
+    height: 100vh;
+    width: 60%;
+}
+.about .animate{
+    position: static;
+    float: right;
+    height: 100vh;
+    width: 40%;
+}
+.about .about-section h1{
+    color: green;
+    text-decoration: dotted;
+    text-align: right;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0px,0px,5px green;
+    
+
+
+}
+.about .about-section span,h2{
+    margin-top: 50px;
+    margin-left: 23px;
+    display: block;
+    color: rgb(107, 107, 9);
+    font-size: 20px;
+    gap: 2px;
+    margin-bottom: 50px;
+}
+.about .about-section a{
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 32px;
+    text-decoration: none;
+    color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.about .about-section a:hover{
+    color: #fff;
+    background: green;
+}
+.about .animate{
+    position: static;
+    display: block;
+    opacity: 0.3;
+}
+.about .animate .box{
+    height: fit-content;
+    margin-top: 90px;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+    border: 1px solid green;
+    box-shadow: 0px 2px 10px 5px green;
+    position: relative;
+}
+@keyframes box{
+    0%{
+        top: 0;
+        left: 0;
+        background: green;
+    }
+    15%{
+        top: 0;
+        left: 50px;
+        background: green;
+    }
+    50%{
+        top: 400;
+        left: 200px;
+        background: green;
+    }
+    75%{
+        top: 400;
+        left: 0;
+        background: green;
+    }
+    100%{
+        top: 0;
+        left: 0px;
+        background: green;
+    }
+}
+/*.about .animate .box .b{
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: box 1s infinite;
+    border-radius: 10px;
+
+}*/
+.animate .box h1{
+    color: green;
+    display: block;
+    margin-top: 400px;
+    text-align: center;
+    cursor: pointer;
+}
+.animate .box h1:hover{
+    color: rgb(6, 131, 27);
+}
+.animate .box img{
+    scroll-behavior: smooth;
+    position: absolute;
+    /*margin-left: 150px;*/
+    margin-top: 0px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    float: left;
+    animation: box 10s infinite;
+    box-shadow: 0px 0px 10px 2px green;
+}
+
+/* About Section Css Ends */
+
+/* Blog Post Section Starts */
+.blog{
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+ .blog .text{
+    max-height: 50px;
+}
+.text h1{
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+}
+.blogposts{
+    display: block;
+    position: static;
+}
+.blogposts .blog1{
+    display: flex;
+    height: 12vh;
+}
+.blog1{
+    margin-top: 8vh;
+    position: static;
+}
+.blog1 img{
+    margin-left: 50px;
+    border-radius: 12px;
+    width: 150px;
+    box-shadow: 0px 0px 10px 1px green;
+    transform: rotate3d(45deg);
+}
+.blog1 .st{
+    margin-left: 30%;
+    display: block;
+
+}
+.blog1 .st h1{
+    color: green;
+    margin: 10px;
+}
+.blog .st span{
+    color: yellow;
+}
+.blog .st div{
+    color: dimgrey;
+}
+.blog hr{
+    color: dimgray;
+    opacity: 0.5;
+}
+.contact{
+    width: 100%;
+    height: 100vh;
+}
+.contact .headline{
+    align-items: center;
+    color: #fff;
+}
+.contact .headline h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contact .form{
+    position: static;
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+.contact .form input{
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+    background: rgb(30, 30, 31);
+    color: #fff;
+}
+.contact .form textarea{
+    width: 100%;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(30, 30, 31);
+    color: #fff;
+}
+.contact .form button{
+    align-items: center;
+    margin: 5px;
+    width: 20%;
+    height:40px;
+    font-size: 23px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(200deg,yellow,green);
+
+}
+.contact .form button:hover{
+    background: linear-gradient(200deg,rgb(190, 190, 50),rgb(48, 187, 48));
+}
+.contact .subscribe{
+    width: 50%;
+    margin-left: 47%;
+    margin-top: 55px;
+    border: 1px solid green;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px green;
+    transform: skewX(15deg);
+
+}
+.contact .subscribe span{
+    color: #fff;
+    margin: 20px;
+
+}
+.contact .subscribe input{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    background: rgb(30, 30, 31);
+    color: #fff;
+}
+.contact .subscribe button{
+    align-items: center;
+    margin: 5px;
+    margin-top: 20px;
+    width: 20%;
+    height:40px;
+    font-size: 100%;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(200deg,yellow,green);
+}
+.contact .subscribe button:hover{
+    background: linear-gradient(200deg,rgb(190, 190, 50),rgb(48, 187, 48));
+}
+.footer{
+    width: 50%;
+    margin: auto;
+}
+.footer hr{
+    width: 100%;
+}
+.footer h1{
+    color: green;
+}
+.footer .links a{
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: yellow;
+    transition: 0.5s ease;
+    margin: 5px;
+    border-left: 1px solid yellow;
+}
+.footer .links a:hover{
+    color: orange;
+    font-size: 23px;
+    transform: skewx(20deg);
+}
+.footer .links h2{
+    margin: 10px;
+    margin-top: 20px;
+}
+.copyright{
+    align-items: center;
+    margin-top: 50px;
+    background-color: grey;
+}
+.copyright span{
+    text-align: center;
+    margin-left: 40%;
+    display: flex;
+    gap: 10%;
+    color: rgb(48, 46, 46);
+}
