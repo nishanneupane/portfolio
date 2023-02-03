@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: #000;
+    background: rgb(62, 26, 54);
 }
 @keyframes mymove{
     from{
@@ -17,16 +17,15 @@ body{
 
 /*header css starts*/
 
-
 .header{
     top: 0;
     width: 100%;
     height: 70px;
-    background: rgb(39, 37, 37);
+    background: rgb(62, 26, 54);
     position: sticky;
     opacity: 1;
-    box-shadow: 0px 0px 5px 1px rgb(34, 32, 32);
     z-index: 1;
+    box-shadow: 0px 0px 5px 1px rgb(34, 32, 32);
 }
 .header .header-left{
     width: 30%;
@@ -48,10 +47,10 @@ body{
     transition: 0.3s ease;
 }
 .header .header-left a:hover{
-    color: green;
+    color: rgb(82, 216, 19);
 }
 .header .header-left span{
-    color: green;
+    color: rgb(82, 216, 19);
     font-size: 32px;
     transition: 0.3s ease;
 }
@@ -65,18 +64,19 @@ body{
 .header .header-right a{
     text-decoration: none;
     color: rgb(179, 161, 161);
-    text-shadow: 0px 0px 1px green;
+    text-shadow: 0px 0px 1px rgb(82, 216, 19);
     font-size: 22px;
     margin-right: 40px;
     transition: 0.3s ease;
 
 }
 .header .header-right a:hover{
-    color: green;
-    text-shadow: 0px 0px 50px green;
+    color: rgb(82, 216, 19);
+    text-shadow: 0px 0px 50px rgb(82, 216, 19);
     border: none;
     transform: skewX(45deg);
 }
+
 
 /*header css Ends*/
 
@@ -88,15 +88,54 @@ body{
     position: static;
 }
 .main-container .left{
+    position: relative;
     height: 100vh;
     float: left;
     width: 50%;
     
 }
+.main-container .left .text::before{
+    position: absolute;
+    content: '';
+    width: 10%;
+    height: 2px;
+    background: yellow;
+    top: 120px;
+
+}
 .main-container .right{
     height: 100vh;
     float: right;
     width: 50%;
+}
+.right{
+    position: relative;
+}
+
+.right .square{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border-radius: 100% 35% 20%;
+    background: linear-gradient(135deg,pink,green);
+    z-index: -1;
+    filter: blur(50px);
+    top: 170px;
+    left: 90px;
+    animation: rotate 4s infinite;
+    opacity: 1;
+}
+@keyframes rotate {
+    25%{
+        top: 130;
+        left: 70;
+        width: 290px;
+    }
+    50%{
+        top: 120;
+        left: 70;
+        width: 320px;
+    }
 }
 .main-container .left .text{
     margin-top: 20vh;
@@ -105,8 +144,8 @@ body{
 .main-container .left .text .a{
 
     font-size: 22px;
-    color: green;
-    text-shadow: 0px 0px 5px green;
+    color: rgb(82, 216, 19);
+    text-shadow: 0px 0px 5px rgb(82, 216, 19);
     display: inline;
 }
 .main-container .left .text span{
@@ -120,66 +159,83 @@ body{
 }
 .main-container .left .button{
     margin-top: 20px;
+    padding: 5px;
     width: 20%;
     text-align: center;
-    color: green;
-    border: 1px solid green;
+    color: rgb(82, 216, 19);
+    border: 1px solid rgb(82, 216, 19);
     border-radius: 5px;
     font-size: 22px;
     font-weight: 500;
     transition: 0.3s ease;
     cursor: pointer;
+    box-shadow: 3px 8px 10px rgb(80, 207, 29);
 
 }
 .main-container .left .button:hover{
     color: #fff;
-    background: green;
+    background: rgb(82, 216, 19);
 }
 .main-container .left .button-cv{
     margin-top: 20px;
+    padding: 7px;
     width: 30%;
     text-align: center;
     color: yellow;
     border: 1px solid yellow;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: x-large;
     font-weight: 500;
     transition: 0.3s ease;
     cursor: pointer;
+    box-shadow: 3px 8px 10px rgb(195, 207, 29);
 }
 .main-container .left .button-cv:hover{
-    color: rgb(139, 113, 113);
-    background: rgb(207, 207, 2);
-    font-weight: 700;
+    transition: .7s ease;
+    color: #fff;
+    background: rgb(185, 185, 5);
 }
 
 .main-container .right{
+    background: none;
     margin-top: 50px;
-    border: 1px green;
+    border: 1px rgb(82, 216, 19);
     margin-right: 60px;
     height: 400px;
     width: 400px;
     border-radius: 20px;
-    box-shadow: 0px 10px 50px 5px green;
+    box-shadow: 0px 10px 50px 5px rgb(82, 216, 19);
 
 }
 .main-container .right h1{
-    color: green;
+    color: rgb(82, 216, 19);
     text-align: center;
-    text-shadow: 0px 0px 20px green;
+    text-shadow: 0px 0px 20px rgb(82, 216, 19);
+    text-transform: capitalize;
+    font-family: monospace
 }
 .main-container .right img{
+    width: 100%;
+    z-index: 1;
     margin-left: 30px;
-    margin-top: 70px;
-    border-radius: 10px;
+    margin-top: 50px;
+    border-radius: 100%;
+    transform: scale(0.8);
+    animation: img-animate 6s infinite;
+    transition: 0.4s ease;
+    border-radius: 100%;
 
+}
+@keyframes img-animate {
+    50%{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
 }
 .main-container .right img:hover{
     transition: 0.3s ease;
-    transform: skew('90deg');
-    box-shadow: 0px 0px 5px 1px green;
-    background: linear-gradient(450deg, black, rgb(24, 23, 23));
-}
+    transform: skew(3deg);
+    }
 hr{
     color: aqua;
     opacity: 0.07;
@@ -197,8 +253,9 @@ hr{
 }
 .about .about-section{
     float: left;
-    height: 100vh;
-    width: 60%;
+    height: fit-content;
+    width: 50%;
+    margin: 10px 0px 0px 43px;
 }
 .about .animate{
     position: static;
@@ -207,80 +264,101 @@ hr{
     width: 40%;
 }
 .about .about-section h1{
-    color: green;
+    color: rgb(82, 216, 19);
     text-decoration: dotted;
     text-align: right;
     font-size: 32px;
     font-weight: 800;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: 0px,0px,5px green;
+    text-shadow: 0px,0px,5px rgb(82, 216, 19);
     
 
 
 }
-.about .about-section span,h2{
-    margin-top: 50px;
-    margin-left: 23px;
+.about .about-section :nth-child(1){
+    margin-top: 20px;
+}
+.about .about-section span{
     display: block;
-    color: rgb(107, 107, 9);
-    font-size: 20px;
+    color: yellow;
+    font-size: 22px;
     gap: 2px;
+    margin-bottom: 10px;
+
+}
+.about .about-section span :nth-child(1){
+    color: rgb(82, 216, 19);
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+.about .about-section span :nth-child(2){
+    margin-top: 40px;
+}
+.about .about-section h2{
+    font-size: 17px;
+    color: rgb(82, 216, 19);
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.about .about-section h2 :last-child{
     margin-bottom: 50px;
 }
-.about .about-section a{
-    margin-top: 10px;
-    margin-left: 100px;
+.about .about-section button{
+    margin: 20px;
+    padding: 12px;
     font-size: 32px;
-    text-decoration: none;
-    color: green;
-    border: 1px solid green;
+    color: rgb(82, 216, 19);
+    border: 1px solid rgb(82, 216, 19);
     border-radius: 5px;
     transition: 0.3s ease;
+    box-shadow: 3px 8px 10px rgb(80, 207, 29);
 }
-.about .about-section a:hover{
+.about .about-section button:hover{
     color: #fff;
-    background: green;
+    background: rgb(82, 216, 19);
 }
 .about .animate{
     position: static;
     display: block;
-    opacity: 0.3;
+    opacity: 1;
 }
 .about .animate .box{
     height: fit-content;
-    margin-top: 90px;
+    margin-top: 50px;
     border-radius: 10px;
     height: 500px;
     width: 500px;
-    border: 1px solid green;
-    box-shadow: 0px 2px 10px 5px green;
+    border: 1px solid rgb(82, 216, 19);
+    box-shadow: 0px 2px 10px 5px rgb(82, 216, 19);
     position: relative;
+    transform: scale(0.8);
 }
 @keyframes box{
     0%{
         top: 0;
         left: 0;
-        background: green;
+        background: rgb(82, 216, 19);
     }
     15%{
         top: 0;
         left: 50px;
-        background: green;
+        background: rgb(82, 216, 19);
     }
     50%{
         top: 400;
         left: 200px;
-        background: green;
+        background: rgb(82, 216, 19);
     }
     75%{
         top: 400;
         left: 0;
-        background: green;
+        background: rgb(82, 216, 19);
     }
     100%{
         top: 0;
         left: 0px;
-        background: green;
+        background: rgb(82, 216, 19);
     }
 }
 /*.about .animate .box .b{
@@ -296,7 +374,7 @@ hr{
 
 }*/
 .animate .box h1{
-    color: green;
+    color: rgb(82, 216, 19);
     display: block;
     margin-top: 400px;
     text-align: center;
@@ -317,7 +395,7 @@ hr{
     left: 0;
     float: left;
     animation: box 10s infinite;
-    box-shadow: 0px 0px 10px 2px green;
+    box-shadow: 0px 0px 10px 2px rgb(82, 216, 19);
 }
 
 /* About Section Css Ends */
@@ -332,30 +410,92 @@ hr{
     max-height: 50px;
 }
 .text h1{
-    color: green;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 42px;
+    color: rgb(82, 216, 19);
+    font-family: 'times new roman';
+    font-size: 32px;
     font-weight: 800;
     text-align: center;
 }
 .blogposts{
     display: block;
-    position: static;
+    position: relative;
+    cursor: pointer;
 }
+.round{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: linear-gradient(45deg, pink,aqua);
+    box-shadow: 10px 30px 50px 5px pink;
+    filter: blur(1px);
+    opacity: 0.7;
+    z-index: -9;
+    top: 200px;
+    left: 400px;
+    animation: roound 4s infinite;
+    transition: 0.5s ease;
+}
+@keyframes roound {
+    50%{
+        left: 390px;
+        top: 150px;
+    }
+}
+.round1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    background: linear-gradient(45deg, pink,aqua);
+    box-shadow: 10px 30px 50px 5px pink;
+    filter: blur(1px);
+    opacity: 0.7;
+    z-index: -9;
+    top: 100px;
+    left: 200px;
+    animation: roound1 4s infinite;
+    transition: 0.5s ease;
+}
+@keyframes roound1 {
+    50%{
+        left: 150px;
+        top: 80px;
+    }
+}
+
+.round2{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: linear-gradient(45deg, pink,aqua);
+    box-shadow: 10px 30px 50px 5px pink;
+    filter: blur(150px);
+    opacity: 0.7;
+    z-index: -9;
+    top: 400px;
+    left: 150px;
+    transition: 0.5s ease;
+}
+
+
 .blogposts .blog1{
     display: flex;
     height: 12vh;
+
 }
 .blog1{
     margin-top: 8vh;
     position: static;
+
 }
 .blog1 img{
     margin-left: 50px;
     border-radius: 12px;
     width: 150px;
-    box-shadow: 0px 0px 10px 1px green;
-    transform: rotate3d(45deg);
+    box-shadow: 0px 0px 10px 1px rgb(82, 216, 19);
+    transform: scale(0.9);
 }
 .blog1 .st{
     margin-left: 30%;
@@ -363,7 +503,7 @@ hr{
 
 }
 .blog1 .st h1{
-    color: green;
+    color: rgb(82, 216, 19);
     margin: 10px;
 }
 .blog .st span{
@@ -379,6 +519,40 @@ hr{
 .contact{
     width: 100%;
     height: 100vh;
+    position: relative;
+}
+.contact .blur1{
+    opacity: 0.8;
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    box-shadow: 12px 20px 50px pink;
+    background: linear-gradient(70deg,pink,violet);
+    border-radius: 50% 20% 30%;
+    z-index: -9;
+    left: 50px;
+    filter: blur(150px);
+}
+.contact .blur2{
+    opacity: 0.8;
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    box-shadow: 12px 20px 50px pink;
+    background: linear-gradient(70deg,rgb(126, 212, 14),rgb(41, 196, 10));
+    border-radius: 50% 10% 30% 90%;
+    z-index: -9;
+    left: 950px;
+    justify-items: left;
+    filter: blur(5px);
+    animation: blur 4s infinite;
+}
+@keyframes blur {
+    50%{
+        left: 930px;
+    }
 }
 .contact .headline{
     align-items: center;
@@ -389,27 +563,30 @@ hr{
     margin-bottom: 10px;
 }
 .contact .form{
+    border: 1px solid yellow;
+    border-radius: 10px;
     position: static;
     width: 50%;
     margin: auto;
+    padding: 3px 5px;
     display: block;
 }
 .contact .form input{
     width: 100%;
     height: 40px;
-    margin: 5px;
+    margin: 5px auto;
     border: none;
     border-radius: 2px;
-    background: rgb(30, 30, 31);
-    color: #fff;
+    background: rgb(185, 216, 44);
+    color: rgb(37, 34, 34);
 }
 .contact .form textarea{
     width: 100%;
-    margin: 5px;
+    margin: 5px auto;
     border: none;
     border-radius: 5px;
-    background: rgb(30, 30, 31);
-    color: #fff;
+    background: rgb(185, 216, 44);
+    color: rgb(37, 34, 34);
 }
 .contact .form button{
     align-items: center;
@@ -419,21 +596,23 @@ hr{
     font-size: 23px;
     border: none;
     border-radius: 20px;
-    background: linear-gradient(200deg,yellow,green);
+    background: linear-gradient(200deg,rgb(233, 233, 43),rgb(53, 119, 22));
+    box-shadow: 3px 8px 10px rgb(80, 207, 29);
+    
 
 }
 .contact .form button:hover{
-    background: linear-gradient(200deg,rgb(190, 190, 50),rgb(48, 187, 48));
+    background: linear-gradient(200deg,rgb(235, 235, 17),rgb(114, 230, 20));
 }
 .contact .subscribe{
     width: 50%;
     margin-left: 47%;
     margin-top: 55px;
-    border: 1px solid green;
+    border: 1px solid rgb(82, 216, 19);
     height: 200px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 1px green;
-    transform: skewX(15deg);
+    box-shadow: 0px 0px 10px 1px rgb(82, 216, 19);
+    transform: skewX(5deg);
 
 }
 .contact .subscribe span{
@@ -447,8 +626,8 @@ hr{
     height: 40px;
     border: none;
     border-radius: 2px;
-    background: rgb(30, 30, 31);
-    color: #fff;
+    background: rgb(185, 216, 44);
+    color: rgb(37, 34, 34);
 }
 .contact .subscribe button{
     align-items: center;
@@ -459,10 +638,11 @@ hr{
     font-size: 100%;
     border: none;
     border-radius: 20px;
-    background: linear-gradient(200deg,yellow,green);
+    box-shadow: 5px -8px 20px rgb(80, 207, 29);
+    background: linear-gradient(200deg,rgb(233, 233, 43),rgb(53, 119, 22));
 }
 .contact .subscribe button:hover{
-    background: linear-gradient(200deg,rgb(190, 190, 50),rgb(48, 187, 48));
+    background: linear-gradient(20deg,rgb(235, 235, 17),rgb(114, 230, 20));
 }
 .footer{
     width: 50%;
@@ -472,7 +652,8 @@ hr{
     width: 100%;
 }
 .footer h1{
-    color: green;
+    color: rgb(82, 216, 19);
+    font-weight: 300;
 }
 .footer .links a{
     display: block;
@@ -491,6 +672,8 @@ hr{
 .footer .links h2{
     margin: 10px;
     margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
 }
 .copyright{
     align-items: center;
@@ -503,4 +686,127 @@ hr{
     display: flex;
     gap: 10%;
     color: rgb(48, 46, 46);
+}
+
+@media (max-width:500px){
+    .header-right{
+        display: none;
+    }
+    .header-left a{
+        font-size: 15px;
+        display: flex;
+        width: 25%;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .main-container{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 60vh;
+        transform: scale(0.7);
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .main-container .right{
+        right: 0;
+        margin: 0;
+    }
+    .main-container .left .button{
+        width: 77%;
+        padding: 5px 10px 5px 0px;
+    }
+    .main-container .left .button-cv{
+        width: 77%;
+        font-size: 18px;
+        padding: 5px 10px 5px 0px;
+    }
+    .about{
+        transform: scale(0.7);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+        margin-bottom: -150px;
+    }
+    .about .about-section h1{
+        text-align: right;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .about .about-section span{
+        font-size: 17px;
+        margin: 0;
+    }
+    .about .about-section span :nth-child(1){
+        font-size: 20px;
+        display: inline;
+    }
+    .about .about-section button{
+        font-size: 18px;
+    }
+    .about .animate{
+        transform: scale(0.5);
+    }
+    .blog{
+        margin-bottom: -5rem;
+    }
+    .blog .text h1{
+        text-align: center;
+        font-size: 20px;
+    }
+    .blog .blogposts{
+        transform: scale(0.8);
+    }
+    .blog .blogposts .blog1{
+        display: block;
+    }
+    .blog .blogposts .blog1 img{
+        width: 35%;
+        margin: 0;
+        left: -10;
+    }
+    .blog .blogposts .blog1 .st{
+        margin-top: -7rem;
+        transform: scale(0.8);
+    }
+    .contact .form{
+        width: 80%;
+        margin: auto;
+    }
+    .contact .form button{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 35%;
+    }
+    .contact .subscribe{
+        width: 100%;
+        margin-left: 10px;
+        transform: scale(0.8);
+    }
+    .contact .subscribe button{
+        width: 40%;
+    }
+    .footer h1{
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+        display: inline;
+    }
+    .footer .links h2{
+        font-size: small;
+    }
+    .footer .links a{
+        font-size: x-small;
+    }
+    .copyright{
+        width: 100%;
+        display: inline-block;
+        font-size: xx-small;
+    }
 }
