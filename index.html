@@ -7,16 +7,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website -Designed by Nishan Neupane</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #6B7280;
+            color: #F3F4F6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        .header-left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .header-right a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #F3F4F6;
+        }
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .left, .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            text-align: center;
+        }
+        .button, .button-cv, .box {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .button:hover, .button-cv:hover, .box:hover {
+            background-color: #F3F4F6;
+            color: #6B7280;
+        }
+        .right .square {
+            height: 24rem;
+            width: 24rem;
+            border-radius: 50%;
+            filter: blur(0.5rem);
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+        .right .square:hover {
+            transform: rotate(0deg);
+        }
+        .right .image img {
+            height: 18rem;
+            width: 24rem;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+        }
+        .right .image img:hover {
+            transform: scale(1);
+        }
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 1rem;
+        }
+        .about-section h1 {
+            font-size: 2.5rem;
+            color: #6B7280;
+        }
+        .about-section span {
+            color: #F3F4F6;
+        }
+        .about-section h2 {
+            font-size: 1.5rem;
+            color: #6B7280;
+        }
+        .about-section button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .about-section button:hover {
+            background-color: #F3F4F6;
+            color: #6B7280;
+        }
+        .animate {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .animate .box {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .animate .box:hover {
+            background-color: #F3F4F6;
+            color: #6B7280;
+        }
+        .blogposts {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        .blog1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blog1 .image img {
+            height: 12rem;
+            width: 18rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .blog1 .image img:hover {
+            transform: scale(1);
+        }
+        .blog1 .st {
+            padding: 1rem;
+        }
+        .blog1 .st h1 {
+            font-size: 2rem;
+            color: #6B7280;
+        }
+        .blog1 .st span {
+            color: #F3F4F6;
+        }
+        .blog1 .st .h3 {
+            font-size: 1rem;
+            color: #6B7280;
+        }
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        .contact .headline h1 {
+            font-size: 2.5rem;
+            color: #6B7280;
+        }
+        .contact .form input, .contact .form textarea, .contact .subscribe input {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact .form button, .contact .subscribe button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .contact .form button:hover, .contact .subscribe button:hover {
+            background-color: #F3F4F6;
+            color: #6B7280;
+        }
+        .subscribe input {
+            margin-bottom: 1rem;
+        }
+        .footer {
+            padding: 1rem;
+        }
+        .footer h1 {
+            font-size: 2.5rem;
+            color: #6B7280;
+        }
+        .footer .links {
+            margin-top: 1rem;
+        }
+        .footer .links h2 {
+            font-size: 1.5rem;
+            color: #6B7280;
+        }
+        .footer .links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #F3F4F6;
+        }
+        .copyright {
+            padding: 1rem;
+            text-align: center;
+        }
+        .copyright span {
+            color: #F3F4F6;
+        }
+    </style>
 </head>
 
-<body class="bg-purple-900 text-white">
+<body>
     <!--Header Section Start-->
-    <div class="header flex justify-between items-center p-4">
+    <div class="header">
         <div class="header-left">
-            <!--<img src="logo.png" alt="Nishan" width="40px" height="40px">-->
             <a href="#" class="text-2xl font-bold">Nishan's <span class="text-green-500">Portfolio</span></a>
         </div>
-        <div class="header-right flex space-x-4">
+        <div class="header-right">
             <a href="#home">Home</a>
             <a href="#about">about</a>
             <a href="#blog">blog</a>
@@ -27,12 +224,12 @@
     <!--Header Section Ends-->
 
     <!--Home page Starts-->
-    <div class="main-container flex items-center justify-center h-screen">
+    <div class="main-container">
         <div class="round bg-white rounded-full h-20 w-20 m-4"></div>
         <div class="round1 bg-white rounded-full h-20 w-20 m-4"></div>
         <div class="round2 bg-white rounded-full h-20 w-20 m-4"></div>
-        <div class="left flex flex-col items-center justify-center">
-            <div class="text text-center">
+        <div class="left">
+            <div class="text">
                 <span class="a text-4xl text-green-500">Hello, I am Nishan Neupane</span>
                 <span class="text-2xl">I am developer</span>
                 <div class="button bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Hire Me</div>
@@ -44,10 +241,10 @@
             </div>
         </div>
 
-        <div class="right flex items-center justify-center">
-            <div class="square bg-gradient-to-br from-pink-500 to-green-500 h-96 w-96 rounded-full filter blur-50 transform rotate-45 transition duration-300 ease-in-out hover:rotate-0"></div>
+        <div class="right">
+            <div class="square bg-gradient-to-br from-pink-500 to-green-500 rounded-full filter blur-50 transform rotate-45 transition duration-300 ease-in-out hover:rotate-0"></div>
 
-            <div class="image flex flex-col items-center justify-center">
+            <div class="image">
                 <h1 class="text-4xl text-green-500">Nishan Neupane</h1>
                 <img src="image/profile.png" alt="" class="h-72 w-96 rounded-full transform scale-110 transition duration-300 ease-in-out hover:scale-100">
             </div>
@@ -63,7 +260,7 @@
     <!--About me page Starts-->
 
     <section class="about" id="about">
-        <div class="about-section flex flex-col items-end p-4">
+        <div class="about-section">
             <h1 class="text-4xl text-green-500">About Me</h1>
             <span>
                 My Name is <span class="text-green-500">Nishan Neupane.</span>
@@ -78,7 +275,7 @@
             </span>
             <button class="bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Learn More</button>
         </div>
-        <div class="animate flex items-center justify-center">
+        <div class="animate">
             <div class="box bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">
 
 
@@ -100,8 +297,8 @@
             <h1 class="text-4xl text-green-500">My BlogPosts</h1>
         </div>
 
-        <div class="blogposts flex space-x-4">
-            <div class="blog1 flex items-center justify-center">
+        <div class="blogposts">
+            <div class="blog1">
                 <div class="image">
                     <img src="image/img1.jpg" alt="">
                 </div>
@@ -114,7 +311,7 @@
                 </div>
             </div>
 
-            <div class="blog1 flex items-center justify-center">
+            <div class="blog1">
                 <div class="image" class="bac">
                     <img src="image/img2.jpg" alt="">
                 </div>
@@ -128,7 +325,7 @@
             </div>
 
 
-            <div class="blog1 flex items-center justify-center">
+            <div class="blog1">
                 <div class="image">
                     <img src="image/img3.jpg" alt="">
                 </div>
@@ -142,7 +339,7 @@
             </div>
 
 
-            <div class="blog1 flex items-center justify-center">
+            <div class="blog1">
                 <div class="image">
                     <img src="image/img4.jpg" alt="">
                 </div>
@@ -169,12 +366,12 @@
         </div>
         <div class="blur1"></div>
         <div class="blur2"></div>
-        <div class="form flex flex-col items-center justify-center p-4">
+        <div class="form">
             <input type="email" placeholder="Enter Your Email Address" class="p-2 rounded mb-4">
             <textarea name="textarea" id="" cols="30" rows="10" placeholder="Drop us Your Queries" class="p-2 rounded mb-4"></textarea>
             <button class="bg-green-500 text-white p-2 rounded cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Send</button>
         </div>
-        <div class="subscribe flex flex-col items-center justify-center p-4">
+        <div class="subscribe">
             <span class="text-2xl">If you like my website , Then subscribe my site.</span>
             <input type="email" placeholder="Enter Your Email" class="p-2 rounded mb-4">
             <button class="bg-yellow-500 text-white p-2 rounded cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-yellow-500">SUBSCRIBE</button>
@@ -185,7 +382,7 @@
     <!-- CONTACT SECTION ENDS-->
 
     <!-- Footer Section Starts-->
-    <footer class="footer p-4">
+    <footer class="footer">
         <h1 class="text-4xl text-green-500">Thank You For Visiting My website</h1>
         <div class="links">
             <h2 class="text-2xl">Available links</h2>
@@ -196,17 +393,15 @@
         </div>
 
     </footer>
-    <footer class="copyright p-4">
+    <footer class="copyright">
         <span>Nishan Neupane<p>@ 2021 all right Reserved </p></span>
     </footer>
     <!-- Footer Section Ends-->
 
 
 
-
 </body>
 
 </html>
-
 
 
