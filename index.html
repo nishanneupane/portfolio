@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website -Designed by Nishan Neupane</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-purple-900 text-white">
     <!--Header Section Start-->
-    <div class="header">
+    <div class="header flex justify-between items-center p-4">
         <div class="header-left">
             <!--<img src="logo.png" alt="Nishan" width="40px" height="40px">-->
-            <a href="#">Nishan's <span>Portfolio</span></a>
+            <a href="#" class="text-2xl font-bold">Nishan's <span class="text-green-500">Portfolio</span></a>
         </div>
-        <div class="header-right">
+        <div class="header-right flex space-x-4">
             <a href="#home">Home</a>
             <a href="#about">about</a>
             <a href="#blog">blog</a>
@@ -27,29 +27,29 @@
     <!--Header Section Ends-->
 
     <!--Home page Starts-->
-    <div class="main-container" id="home">
-        <div class="round"></div>
-        <div class="round1"></div>
-        <div class="round2"></div>
-        <div class="left">
-            <div class="text">
-                <span class="a">Hello, I am Nishan Neupane</span>
-                <span>I am developer</span>
-                <div class="button">Hire Me</div>
-                <div class="button-cv">Download CV</div>
+    <div class="main-container flex items-center justify-center h-screen">
+        <div class="round bg-white rounded-full h-20 w-20 m-4"></div>
+        <div class="round1 bg-white rounded-full h-20 w-20 m-4"></div>
+        <div class="round2 bg-white rounded-full h-20 w-20 m-4"></div>
+        <div class="left flex flex-col items-center justify-center">
+            <div class="text text-center">
+                <span class="a text-4xl text-green-500">Hello, I am Nishan Neupane</span>
+                <span class="text-2xl">I am developer</span>
+                <div class="button bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Hire Me</div>
+                <div class="button-cv bg-yellow-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-yellow-500">Download CV</div>
 
             </div>
-            <div class="circle">
+            <div class="circle bg-white rounded-full h-20 w-20 m-4">
 
             </div>
         </div>
 
-        <div class="right">
-            <div class="square"></div>
+        <div class="right flex items-center justify-center">
+            <div class="square bg-gradient-to-br from-pink-500 to-green-500 h-96 w-96 rounded-full filter blur-50 transform rotate-45 transition duration-300 ease-in-out hover:rotate-0"></div>
 
-            <div class="image">
-                <h1>Nishan Neupane</h1>
-                <img src="image/profile.png" alt="" height="290px" width="350px">
+            <div class="image flex flex-col items-center justify-center">
+                <h1 class="text-4xl text-green-500">Nishan Neupane</h1>
+                <img src="image/profile.png" alt="" class="h-72 w-96 rounded-full transform scale-110 transition duration-300 ease-in-out hover:scale-100">
             </div>
         </div>
 
@@ -63,23 +63,23 @@
     <!--About me page Starts-->
 
     <section class="about" id="about">
-        <div class="about-section">
-            <h1>About Me</h1>
+        <div class="about-section flex flex-col items-end p-4">
+            <h1 class="text-4xl text-green-500">About Me</h1>
             <span>
-                My Name is <span>Nishan Neupane.</span>
+                My Name is <span class="text-green-500">Nishan Neupane.</span>
                 <span>Skills :-</span>
-                <h2>Website Development, Programming and Canva.</h2>
+                <h2 class="text-2xl">Website Development, Programming and Canva.</h2>
                 <span>Experience :-</span>
-                <h2>Working for 6 Month at Kadam Fitness and Sports.</h2>
+                <h2 class="text-2xl">Working for 6 Month at Kadam Fitness and Sports.</h2>
                 <span>Study :-</span>
-                <h2>BIT from Whitehouse College of IT.</h2>
+                <h2 class="text-2xl">BIT from Whitehouse College of IT.</h2>
                 <span>Internship :-</span>
-                <h2>Interned at Deerwalk for 5 Month.</h2>
+                <h2 class="text-2xl">Interned at Deerwalk for 5 Month.</h2>
             </span>
-            <button>Learn More</button>
+            <button class="bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Learn More</button>
         </div>
-        <div class="animate">
-            <div class="box">
+        <div class="animate flex items-center justify-center">
+            <div class="box bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">
 
 
                 <div class="b">
@@ -97,11 +97,11 @@
     <!-- Blog Post Starts-->
     <section class="blog" id="blog">
         <div class="text">
-            <h1>My BlogPosts</h1>
+            <h1 class="text-4xl text-green-500">My BlogPosts</h1>
         </div>
 
-        <div class="blogposts">
-            <div class="blog1">
+        <div class="blogposts flex space-x-4">
+            <div class="blog1 flex items-center justify-center">
                 <div class="image">
                     <img src="image/img1.jpg" alt="">
                 </div>
@@ -114,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="blog1">
+            <div class="blog1 flex items-center justify-center">
                 <div class="image" class="bac">
                     <img src="image/img2.jpg" alt="">
                 </div>
@@ -128,7 +128,7 @@
             </div>
 
 
-            <div class="blog1">
+            <div class="blog1 flex items-center justify-center">
                 <div class="image">
                     <img src="image/img3.jpg" alt="">
                 </div>
@@ -142,7 +142,7 @@
             </div>
 
 
-            <div class="blog1">
+            <div class="blog1 flex items-center justify-center">
                 <div class="image">
                     <img src="image/img4.jpg" alt="">
                 </div>
@@ -157,7 +157,6 @@
 
         </div>
 
-
     </section>
     <hr>
     <!-- Blog Post Ends-->
@@ -166,19 +165,19 @@
     <!-- CONTACT SECTION STARTS-->
     <section class="contact" id="contact">
         <div class="headline">
-            <h1>Contact Me</h1>
+            <h1 class="text-4xl text-green-500">Contact Me</h1>
         </div>
         <div class="blur1"></div>
         <div class="blur2"></div>
-        <div class="form">
-            <input type="email" placeholder="Enter Your Email Address">
-            <textarea name="textarea" id="" cols="30" rows="10" placeholder="Drop us Your Queries"></textarea>
-            <button>Send</button>
+        <div class="form flex flex-col items-center justify-center p-4">
+            <input type="email" placeholder="Enter Your Email Address" class="p-2 rounded mb-4">
+            <textarea name="textarea" id="" cols="30" rows="10" placeholder="Drop us Your Queries" class="p-2 rounded mb-4"></textarea>
+            <button class="bg-green-500 text-white p-2 rounded cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Send</button>
         </div>
-        <div class="subscribe">
-            <span>If you like my website , Then subscribe my site.</span>
-            <input type="email" placeholder="Enter Your Email">
-            <button>SUBSCRIBE</button>
+        <div class="subscribe flex flex-col items-center justify-center p-4">
+            <span class="text-2xl">If you like my website , Then subscribe my site.</span>
+            <input type="email" placeholder="Enter Your Email" class="p-2 rounded mb-4">
+            <button class="bg-yellow-500 text-white p-2 rounded cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-yellow-500">SUBSCRIBE</button>
         </div>
     </section>
     <hr>
@@ -186,10 +185,10 @@
     <!-- CONTACT SECTION ENDS-->
 
     <!-- Footer Section Starts-->
-    <footer class="footer">
-        <h1>Thank You For Visiting My website</h1>
+    <footer class="footer p-4">
+        <h1 class="text-4xl text-green-500">Thank You For Visiting My website</h1>
         <div class="links">
-            <h2>Available links</h2>
+            <h2 class="text-2xl">Available links</h2>
             <a href="#home">Home -></a>
             <a href="#about">about -></a>
             <a href="#blog">blogpost -></a>
@@ -197,7 +196,7 @@
         </div>
 
     </footer>
-    <footer class="copyright">
+    <footer class="copyright p-4">
         <span>Nishan Neupane<p>@ 2021 all right Reserved </p></span>
     </footer>
     <!-- Footer Section Ends-->
@@ -208,3 +207,6 @@
 </body>
 
 </html>
+
+
+
