@@ -5,204 +5,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website -Designed by Nishan Neupane</title>
+    <title>Nishan Neupane - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #6B7280;
-            color: #F3F4F6;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            color: #374151;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem;
+            padding: 1rem 2rem;
+            background-color: #1f2937;
+            color: #ffffff;
         }
         .header-left {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: bold;
         }
         .header-right a {
             margin-left: 1.5rem;
             text-decoration: none;
-            color: #F3F4F6;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        .header-right a:hover {
+            color: #34d399;
         }
         .main-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            text-align: center;
+            padding: 1rem;
         }
-        .left, .right {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .main-container h1 {
+            font-size: 2.5rem;
+            color: #34d399;
         }
-        .text {
+        .main-container p {
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+        }
+        .button, .button-cv {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 1rem;
+        }
+        .button {
+            background-color: #34d399;
+            color: #ffffff;
+        }
+        .button:hover {
+            background-color: #ffffff;
+            color: #34d399;
+        }
+        .button-cv {
+            background-color: #fbbf24;
+            color: #ffffff;
+        }
+        .button-cv:hover {
+            background-color: #ffffff;
+            color: #fbbf24;
+        }
+        .profile-image {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        .about-section, .blog-section, .contact-section {
+            padding: 2rem;
             text-align: center;
         }
-        .button, .button-cv, .box {
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
+        .about-section h1, .blog-section h1, .contact-section h1 {
+            font-size: 2rem;
+            color: #34d399;
+            margin-bottom: 1rem;
         }
-        .button:hover, .button-cv:hover, .box:hover {
-            background-color: #F3F4F6;
-            color: #6B7280;
-        }
-        .right .square {
-            height: 24rem;
-            width: 24rem;
-            border-radius: 50%;
-            filter: blur(0.5rem);
-            transform: rotate(45deg);
-            transition: all 0.3s ease-in-out;
-        }
-        .right .square:hover {
-            transform: rotate(0deg);
-        }
-        .right .image img {
-            height: 18rem;
-            width: 24rem;
-            border-radius: 50%;
-            transition: all 0.3s ease-in-out;
-        }
-        .right .image img:hover {
-            transform: scale(1);
-        }
-        .about-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            padding: 1rem;
-        }
-        .about-section h1 {
-            font-size: 2.5rem;
-            color: #6B7280;
-        }
-        .about-section span {
-            color: #F3F4F6;
-        }
-        .about-section h2 {
-            font-size: 1.5rem;
-            color: #6B7280;
-        }
-        .about-section button {
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-        .about-section button:hover {
-            background-color: #F3F4F6;
-            color: #6B7280;
-        }
-        .animate {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .animate .box {
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-        .animate .box:hover {
-            background-color: #F3F4F6;
-            color: #6B7280;
+        .about-section p, .blog-section p {
+            color: #4b5563;
+            margin: 0.5rem 0;
         }
         .blogposts {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
         }
-        .blog1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .blog1 .image img {
-            height: 12rem;
-            width: 18rem;
+        .blogpost {
+            background-color: #ffffff;
             border-radius: 0.5rem;
-            transition: all 0.3s ease-in-out;
-        }
-        .blog1 .image img:hover {
-            transform: scale(1);
-        }
-        .blog1 .st {
             padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
-        .blog1 .st h1 {
-            font-size: 2rem;
-            color: #6B7280;
+        .blogpost:hover {
+            transform: translateY(-5px);
         }
-        .blog1 .st span {
-            color: #F3F4F6;
+        .blogpost img {
+            border-radius: 0.5rem;
+            width: 100%;
+            height: auto;
         }
-        .blog1 .st .h3 {
-            font-size: 1rem;
-            color: #6B7280;
-        }
-        .contact {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
-        .contact .headline h1 {
-            font-size: 2.5rem;
-            color: #6B7280;
-        }
-        .contact .form input, .contact .form textarea, .contact .subscribe input {
-            padding: 0.5rem 1rem;
+        .contact-section input, .contact-section textarea {
+            padding: 0.75rem;
             border-radius: 0.5rem;
             margin-bottom: 1rem;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #d1d5db;
         }
-        .contact .form button, .contact .subscribe button {
-            padding: 0.5rem 1rem;
+        .contact-section button {
+            padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
+            background-color: #34d399;
+            color: #ffffff;
+            border: none;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            transition: background-color 0.3s;
         }
-        .contact .form button:hover, .contact .subscribe button:hover {
-            background-color: #F3F4F6;
-            color: #6B7280;
-        }
-        .subscribe input {
-            margin-bottom: 1rem;
+        .contact-section button:hover {
+            background-color: #ffffff;
+            color: #34d399;
         }
         .footer {
             padding: 1rem;
+            text-align: center;
+            background-color: #1f2937;
+            color: #ffffff;
         }
         .footer h1 {
-            font-size: 2.5rem;
-            color: #6B7280;
-        }
-        .footer .links {
-            margin-top: 1rem;
-        }
-        .footer .links h2 {
             font-size: 1.5rem;
-            color: #6B7280;
         }
         .footer .links a {
-            margin-left: 1.5rem;
+            margin: 0 0.5rem;
+            color: #34d399;
             text-decoration: none;
-            color: #F3F4F6;
         }
-        .copyright {
-            padding: 1rem;
-            text-align: center;
-        }
-        .copyright span {
-            color: #F3F4F6;
+        .footer .links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -211,197 +165,94 @@
     <!--Header Section Start-->
     <div class="header">
         <div class="header-left">
-            <a href="#" class="text-2xl font-bold">Nishan's <span class="text-green-500">Portfolio</span></a>
+            Nishan's Portfolio
         </div>
         <div class="header-right">
             <a href="#home">Home</a>
-            <a href="#about">about</a>
-            <a href="#blog">blog</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
-
     <!--Header Section Ends-->
 
     <!--Home page Starts-->
-    <div class="main-container">
-        <div class="round bg-white rounded-full h-20 w-20 m-4"></div>
-        <div class="round1 bg-white rounded-full h-20 w-20 m-4"></div>
-        <div class="round2 bg-white rounded-full h-20 w-20 m-4"></div>
-        <div class="left">
-            <div class="text">
-                <span class="a text-4xl text-green-500">Hello, I am Nishan Neupane</span>
-                <span class="text-2xl">I am developer</span>
-                <div class="button bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Hire Me</div>
-                <div class="button-cv bg-yellow-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-yellow-500">Download CV</div>
-
-            </div>
-            <div class="circle bg-white rounded-full h-20 w-20 m-4">
-
-            </div>
-        </div>
-
-        <div class="right">
-            <div class="square bg-gradient-to-br from-pink-500 to-green-500 rounded-full filter blur-50 transform rotate-45 transition duration-300 ease-in-out hover:rotate-0"></div>
-
-            <div class="image">
-                <h1 class="text-4xl text-green-500">Nishan Neupane</h1>
-                <img src="image/profile.png" alt="" class="h-72 w-96 rounded-full transform scale-110 transition duration-300 ease-in-out hover:scale-100">
-            </div>
-        </div>
-
+    <div class="main-container" id="home">
+        <h1>Hello, I am Nishan Neupane</h1>
+        <p>I am a Developer</p>
+        <img src="image/profile.png" alt="Nishan Neupane" class="profile-image">
+        <div class="button">Hire Me</div>
+        <div class="button-cv">Download CV</div>
     </div>
-    <hr>
-
-
-
     <!--Home page Ends-->
 
     <!--About me page Starts-->
-
-    <section class="about" id="about">
-        <div class="about-section">
-            <h1 class="text-4xl text-green-500">About Me</h1>
-            <span>
-                My Name is <span class="text-green-500">Nishan Neupane.</span>
-                <span>Skills :-</span>
-                <h2 class="text-2xl">Website Development, Programming and Canva.</h2>
-                <span>Experience :-</span>
-                <h2 class="text-2xl">Working for 6 Month at Kadam Fitness and Sports.</h2>
-                <span>Study :-</span>
-                <h2 class="text-2xl">BIT from Whitehouse College of IT.</h2>
-                <span>Internship :-</span>
-                <h2 class="text-2xl">Interned at Deerwalk for 5 Month.</h2>
-            </span>
-            <button class="bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Learn More</button>
-        </div>
-        <div class="animate">
-            <div class="box bg-green-500 text-white p-2 rounded mt-4 cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">
-
-
-                <div class="b">
-
-                    <img src="image/profile.png" alt="">
-                    <h1>Learning From Beginning</h1>
-                </div>
-
-            </div>
-        </div>
+    <section class="about-section" id="about">
+        <h1>About Me</h1>
+        <p>My Name is <span class="text-green-500">Nishan Neupane.</span></p>
+        <p>Skills: Website Development, Programming, and Canva.</p>
+        <p>Experience: Working for 6 Months at Kadam Fitness and Sports.</p>
+        <p>Study: BIT from Whitehouse College of IT.</p>
+        <p>Internship: Interned at Deerwalk for 5 Months.</p>
     </section>
-    <hr>
     <!--About me page Ends-->
 
     <!-- Blog Post Starts-->
-    <section class="blog" id="blog">
-        <div class="text">
-            <h1 class="text-4xl text-green-500">My BlogPosts</h1>
-        </div>
-
+    <section class="blog-section" id="blog">
+        <h1>My Blog Posts</h1>
         <div class="blogposts">
-            <div class="blog1">
-                <div class="image">
-                    <img src="image/img1.jpg" alt="">
-                </div>
-                <div class="st">
-                    <hr>
-                    <h1>Ecommerce Store in Nepal</h1>
-                    <span>This is an ecommerce store where you can buy and sell variety of foods and other luxury
-                        items.</span>
-                    <div class="h3">2019 - mar 25</div>
-                </div>
+            <div class="blogpost">
+                <img src="image/img1.jpg" alt="Ecommerce Store in Nepal">
+                <h2>Ecommerce Store in Nepal</h2>
+                <p>This is an ecommerce store where you can buy and sell a variety of foods and other luxury items.</p>
+                <p class="h3">2019 - Mar 25</p>
             </div>
-
-            <div class="blog1">
-                <div class="image" class="bac">
-                    <img src="image/img2.jpg" alt="">
-                </div>
-                <div class="st">
-                    <hr>
-                    <h1>School's Website</h1>
-                    <span>Here you can search all facilities and portfolio of your study colege or other college. you
-                        can find some important news here.</span>
-                    <div class="h3">2016 - jan 4</div>
-                </div>
+            <div class="blogpost">
+                <img src="image/img2.jpg" alt="School's Website">
+                <h2>School's Website</h2>
+                <p>Here you can search all facilities and portfolio of your study college or other colleges.</p>
+                <p class="h3">2016 - Jan 4</p>
             </div>
-
-
-            <div class="blog1">
-                <div class="image">
-                    <img src="image/img3.jpg" alt="">
-                </div>
-                <div class="st">
-                    <hr>
-                    <h1>Portfolio Website</h1>
-                    <span>This is a portfolio website where you can search all qualities or education or biodata or
-                        other more essential information.</span>
-                    <div class="h3">2022 - aug 9</div>
-                </div>
+            <div class="blogpost">
+                <img src="image/img3.jpg" alt="Portfolio Website">
+                <h2>Portfolio Website</h2>
+                <p>This is a portfolio website where you can find all essential information about my work.</p>
+                <p class="h3">2022 - Aug 9</p>
             </div>
-
-
-            <div class="blog1">
-                <div class="image">
-                    <img src="image/img4.jpg" alt="">
-                </div>
-                <div class="st">
-                    <hr>
-                    <h1>Job Portal Website </h1>
-                    <span>Here you can search and provide varieties of jobs according to experience , qualities and
-                        other more. You can freelance here and earn money.</span>
-                    <div class="h3">2018 - feb 14</div>
-                </div>
+            <div class="blogpost">
+                <img src="image/img4.jpg" alt="Job Portal Website">
+                <h2>Job Portal Website</h2>
+                <p>Here you can search and provide various jobs according to experience and skills.</p>
+                <p class="h3">2018 - Feb 14</p>
             </div>
-
         </div>
-
     </section>
-    <hr>
     <!-- Blog Post Ends-->
 
-
     <!-- CONTACT SECTION STARTS-->
-    <section class="contact" id="contact">
-        <div class="headline">
-            <h1 class="text-4xl text-green-500">Contact Me</h1>
-        </div>
-        <div class="blur1"></div>
-        <div class="blur2"></div>
-        <div class="form">
-            <input type="email" placeholder="Enter Your Email Address" class="p-2 rounded mb-4">
-            <textarea name="textarea" id="" cols="30" rows="10" placeholder="Drop us Your Queries" class="p-2 rounded mb-4"></textarea>
-            <button class="bg-green-500 text-white p-2 rounded cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-green-500">Send</button>
-        </div>
-        <div class="subscribe">
-            <span class="text-2xl">If you like my website , Then subscribe my site.</span>
-            <input type="email" placeholder="Enter Your Email" class="p-2 rounded mb-4">
-            <button class="bg-yellow-500 text-white p-2 rounded cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:text-yellow-500">SUBSCRIBE</button>
-        </div>
+    <section class="contact-section" id="contact">
+        <h1>Contact Me</h1>
+        <input type="email" placeholder="Enter Your Email Address">
+        <textarea placeholder="Drop us Your Queries" rows="4"></textarea>
+        <button>Send</button>
     </section>
-    <hr>
-
     <!-- CONTACT SECTION ENDS-->
 
     <!-- Footer Section Starts-->
     <footer class="footer">
-        <h1 class="text-4xl text-green-500">Thank You For Visiting My website</h1>
+        <h1>Thank You For Visiting My Website</h1>
         <div class="links">
-            <h2 class="text-2xl">Available links</h2>
-            <a href="#home">Home -></a>
-            <a href="#about">about -></a>
-            <a href="#blog">blogpost -></a>
-            <a href="#contact">Contact -></a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
         </div>
-
-    </footer>
-    <footer class="copyright">
-        <span>Nishan Neupane<p>@ 2021 all right Reserved </p></span>
+        <div class="copyright">
+            <span>Nishan Neupane © 2021 All Rights Reserved</span>
+        </div>
     </footer>
     <!-- Footer Section Ends-->
-
-
 
 </body>
 
 </html>
-
-
